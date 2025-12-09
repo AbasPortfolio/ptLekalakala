@@ -21,7 +21,7 @@ function LoginPage() {
             event.stopPropagation();
         } else {
             try {
-                const response = await axios.post('https://backrecord.onrender.com/record/login', {
+                const response = await axios.post('https://backendrecords.onrender.com/record/login', {
                     email: sanitizeInput(email),
                     password: sanitizeInput(password),
                 }, {
@@ -96,3 +96,4 @@ function LoginPage() {
 
 
 export default LoginPage;
+
