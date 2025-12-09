@@ -1,0 +1,22 @@
+.nav-create-container {
+    margin-left: 12%;
+    padding: 20px;
+    width: calc(100% - 12%);
+}
+
+.nav-create-container .nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.nav-create-container .nav-link {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-create-container .nav-link:hover {
+    background-color: #0056b3;
+    color: white;
+}

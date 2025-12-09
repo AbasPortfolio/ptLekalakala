@@ -1,0 +1,32 @@
+.home-page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3eed4;
+}
+
+.main-content {
+    margin-left: 12%;
+    padding: 20px;
+    width: calc(100% - 12%);
+}
+
+.main-content h1 {
+    color: #000757;
+}
+
+.main-content h2 {
+    color: #575fcf;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.homeImg{
+    overflow: hidden;
+    object-fit: contain;
+    width: auto;
+}
