@@ -13,7 +13,7 @@ import NotFound from './pages/NotFound';
 
 import EditProfile from "./organisms/EditProfile";
 import UserItemPage from './organisms/UserItemPage';
-import ProtectedRoute from "./pages/ProtectedRoute";
+
 import { UserProvider } from './context/UserContext'; // Import UserProvider
 
 const App: React.FC = () => {
@@ -29,14 +29,14 @@ const App: React.FC = () => {
 
                     {/* Protected routes */}
       
-                    <Route path="/home" element={<ProtectedRoute element={HomePage} />} />
-                    <Route path="/settings" element={<ProtectedRoute element={SettingsPage} />} />
-                    <Route path="/edit" element={<ProtectedRoute element={EditProfile} />} />
-                    <Route path="/create" element={<ProtectedRoute element={CreatePage} />} />
-                    <Route path="/patients" element={<ProtectedRoute element={PatientsPage} />} />
+                    <Route path="/home" element={<HomePage/>} />
+                    <Route path="/settings" element={<SettingsPage/>} />
+                    <Route path="/edit" element={<EditProfile/>} />
+                    <Route path="/create" element={<CreatePage/>} />
+                    <Route path="/patients" element={<PatientsPage/>} />
 
-                    <Route path="/patients/:id" element={<ProtectedRoute element={UserItemPage} />} />
-                    <Route path="/profile/editProfile" element={<ProtectedRoute element={EditProfile} />} />
+                    <Route path="/patients/:id" element={<UserItemPage/>} />
+                    <Route path="/profile/editProfile" element={<EditProfile/>} />
                 </Routes>
             </div>
         </UserProvider>
@@ -45,3 +45,4 @@ const App: React.FC = () => {
 
 
 export default App;
+
