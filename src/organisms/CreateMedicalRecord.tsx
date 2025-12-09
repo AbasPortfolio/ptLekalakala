@@ -52,9 +52,8 @@ function CreateMedicalRecord() {
                     pathology: pathology,
                     patient_triage: status,
                     notes: notes,
-                }, {
-                    withCredentials: true,
-                });
+                }, 
+                );
                 console.log(response)
 
                 if (response.status === 201) {
@@ -192,6 +191,7 @@ function CreateMedicalRecord() {
 }
 
 export default CreateMedicalRecord;
+
 
 
 
