@@ -37,7 +37,7 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             console.log(userId)
             
             if (userId) {
-                const response = await axios.get(`https://backrecord.onrender.com/record/user/${userId}`, { withCredentials: true });
+                const response = await axios.get(`https://backendrecords.onrender.com/record/user/${userId}`, { withCredentials: true });
                 setUser(response.data);
             }
         } catch (error) {
@@ -48,7 +48,7 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     // Fetch list of patients and assign unique IDs
     const fetchUsersInfo = async () => {
         try {
-            const response = await axios.get(`https://backrecord.onrender.com/record/users`, { withCredentials: true });
+            const response = await axios.get(`https://backendrecords.onrender.com/record/users`, { withCredentials: true });
             const patientsWithIds = response.data.map((patient: Patient) => ({
                 ...patient,
                 uniqueId: uuidv4() // Add a unique ID to each patient
@@ -62,7 +62,7 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     // Fetch list of appointments and assign unique IDs
     const fetchAppointmentsInfo = async () => {
         try {
-            const response = await axios.get(`https://backrecord.onrender.com/record/appointments`, { withCredentials: true });
+            const response = await axios.get(`https://backendrecords.onrender.com/record/appointments`, { withCredentials: true });
             const appointments = response.data.map((app: Patient) => ({
                 ...app,
                 uniqueId: uuidv4() // Add a unique ID to each patient
@@ -88,3 +88,4 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     );
 
 };
+
