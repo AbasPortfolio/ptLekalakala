@@ -36,7 +36,7 @@ function SignupPage() {
         const sanitizedPassword = sanitizeInput(password);
 
         try {
-            const response = await axios.post('https://backendrecords.onrender.com/record/register', {
+            const response = await axios.post('https://backrecord.onrender.com/record/register', {
                 email: sanitizedEmail,
                 username: sanitizedUsername,
                 password: sanitizedPassword,
@@ -144,5 +144,6 @@ function SignupPage() {
 }
 
 export default SignupPage;
+
 
 
