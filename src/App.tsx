@@ -19,7 +19,7 @@ import { UserProvider } from './context/UserContext'; // Import UserProvider
 const App: React.FC = () => {
     const location = useLocation();
     return (
-        <UserProvider>
+        
             <div className={`${location.pathname === '/' ? 'Loading-background' : 'App'}`}>
                 <Routes>
                     <Route path="/" element={<LoadingPage />} />
@@ -40,9 +40,10 @@ const App: React.FC = () => {
                     <Route path="/profile/editProfile" element={<ProtectedRoute element={EditProfile} />} />
                 </Routes>
             </div>
-        </UserProvider>
+        
     );
 }
 
 export default App;
+
 
