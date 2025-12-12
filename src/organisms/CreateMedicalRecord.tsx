@@ -16,7 +16,7 @@ function CreateMedicalRecord() {
     const [gender, setGender] = useState<GenderType>(GenderType.Male);
     const [diagnostic, setDiagnostic] = useState('');
     const [pathology, setPathology] = useState('');
-    const [status,setStatus] = useState('');
+    const [status] = useState('');
     const [notes, setNotes] = useState('');
     const [validated, setValidated] = useState(false);
     const [error, setError] = useState('');
@@ -191,6 +191,7 @@ function CreateMedicalRecord() {
 }
 
 export default CreateMedicalRecord;
+
 
 
 
